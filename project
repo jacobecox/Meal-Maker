@@ -1,0 +1,49 @@
+var menu = {
+    addDishToCourse: function (courseName, dishName, dishPrice) {
+        let dish = dishName, dishPrice
+        if (courseName == appetizers) {
+            return dish.push(appetizers)
+        } else if (courseName == mains) {
+            return dish.push(mains)
+        } else if (courseName == desserts) {
+            return dish.push(desserts)
+        } else return 'course not available'
+    },
+
+    getRandomDishFromCourse: function (courseName) {
+        let dishes = courseName[dishName]
+        Math.floor(Math.random() * dishes.length)
+        return dishes
+    },
+
+    generateRandomMeal: function () {
+        let appetizers = getRandomDishFromCourse(appetizers)
+        let mains = getRandomDishFromCourse(mains)
+        let desserts = getRandomDishFromCourse(desserts)
+        return appetizers, mains, desserts
+    },
+
+    courses: {
+    appetizers: [
+        {dishName: 'chips and guac', dishPrice: 10},
+        {dishName: 'calamari', dishPrice: 15},
+        {dishName: 'artichoke', dishPrice: 18},
+        {dishName: 'spinich dip', dishPrice: 17}
+    ],
+    mains: [
+        {dishName: 'steak and lobster', dishPrice: 45},
+        {dishName: 'flatiron steak', dishPrice: 28},
+        {dishName: 'pot roast', dishPrice: 22},
+        {dishName: 'ravioli', dishPrice: 20}
+    ],
+    desserts: [
+        {dishName: 'chocolate cake', dishPrice: 10},
+        {dishName: 'sundae', dishPrice: 7},
+        {dishName: 'tiramisu', dishPrice: 12}
+    ]
+},
+}
+var meal = generateRandomMeal()
+
+return meal
+
